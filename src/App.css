@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,11 +17,77 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Logo-Padrão img {
+  height: 15vmin;
+}
+/* .Post {
+  height: 50vmin;
+  width: 85vmin;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.Post-Title {
+  width: 78vmin;
+  text-align: left;
+}
+.Post-Body {
+  width: 80vmin;
+  text-align: justify;
+}
+
+#Post-Cards .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+.Posts {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Post {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.Post:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+.Post-Body {
+  position: relative;
+  text-decoration: none;
+  color: rgba(51, 51, 51, 0.9);
+}
+.Post-Body::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.Post-Body:hover::after {
+  width: 100%;
+}
+
+.Post-Title {
+  grid-row: 1/4;
+  font-weight: 400;
+  color: #333333;
+}
+
+.Post-Body {
+  grid-row: 5/5;
+  align-self: center;
 }

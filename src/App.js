@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+//CSS
+import "./App.css";
 
+//Components
+import Header from "./components/Header";
+import Post from "./components/Post";
+import Comment from "./components/Comment";
+import Footer from "./components/Footer";
+
+//Imgs
+import logo from "./resources/Huawei-Logo.png";
+
+//JSON
+import newPost from "./posts.json";
+//Variables
+const companyTitle = "Henckel";
+const websiteUrl = "www.testetecnico.com";
+
+//App
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <center>
+        <Header
+          urlBase={websiteUrl}
+          logoSrc={logo}
+          title={companyTitle}
+        ></Header>
+      </center>
+
+      <center>
+        {newPost.map((posts) => (
+          <Post {...posts}></Post>
+        ))}
+      </center>
+
+      <center>
+        <Comment></Comment>
+      </center>
+
+      <center>
+        <Footer logoSrc={logo} title={companyTitle}></Footer>
+      </center>
     </div>
   );
 }
