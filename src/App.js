@@ -2,6 +2,7 @@
 import "./App.css";
 
 //Components
+//eslint-disable-next-line
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Post from "./components/Post";
@@ -37,7 +38,7 @@ function App() {
 
       <center>
         {postsData.map((post) => (
-          <Post {...postsData}></Post>
+          <Post {...post}></Post>
         ))}
       </center>
 
