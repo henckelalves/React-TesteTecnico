@@ -14,7 +14,7 @@ import PostList from "./components/PostsList";
 import Accordion from "./components/Accordion";
 
 //Imgs
-import logo from "./resources/Huawei-Logo.png";
+import logo from "./resources/Logo.png";
 
 //Variables
 const companyTitle = "Henckel";
