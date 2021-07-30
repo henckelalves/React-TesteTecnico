@@ -5,17 +5,17 @@ function Comment(props) {
   return (
     <div>
       {props.comment.map((prop) => (
-        <div className="container card">
-          <div>
-            <b className="float-left">{titleCase(prop.name)}</b>
+        <div className="Comment">
+          <div className="UserInfo">
+            <b className="UserInfo-Name">{titleCase(prop.name)}</b>
             <br />
-            <a className="float-left" href={"mailto:" + prop.email}>
+            <a href={"mailto:" + prop.email} className="UserInfo-Email">
               {prop.email}
             </a>
             <br />
             <br />
           </div>
-          <div className="text-justify comment-pad">{prop.body}</div>
+          <div className="Comment-Text">{prop.body}</div>
           <br />
         </div>
       ))}

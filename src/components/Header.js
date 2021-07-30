@@ -2,8 +2,8 @@ import React from "react";
 
 function Header(props) {
   return (
-    <div className="Header">
-      <div className="Logo-Padrão">
+    <div className="header-footer">
+      <div className="float-left logo">
         <a href={props.urlBase}>
           <img src={props.logoSrc} alt="logo" />
         </a>

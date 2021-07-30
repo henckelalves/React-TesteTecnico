@@ -1,3 +1,12 @@
+/* APP BEGIN  */
+:root {
+  --color1: #a6122d;
+  --color2: #d91a3d;
+  --color3: #bf1151;
+  --color4: #bf8275;
+  --color5: #260101;
+}
+
 .App {
   text-align: center;
 }
@@ -10,84 +19,152 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+}
+/* APP */
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.accordion {
+  margin: 10px;
+  max-width: 100vmin;
+  min-width: 100vmin;
+  /* min-height: 20px; */
+  display: grid;
+  border: 0px;
+  border-radius: 3vmin;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-.Logo-Padrão img {
-  height: 15vmin;
-}
-/* .Post {
-  height: 50vmin;
-  width: 85vmin;
-  border: 1px solid black;
-  border-radius: 20px;
-}
-.Post-Title {
-  width: 78vmin;
-  text-align: left;
-}
-.Post-Body {
-  width: 80vmin;
-  text-align: justify;
+.accordion:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  /* transform: scale(1.01); */
 }
 
-#Post-Cards .cards {
+.accordion-title {
+  font-weight: 700;
+  font-size: calc(10px + 2vmin);
+  text-align: center;
+}
+
+.accordion-content {
+  margin: auto;
+  padding: 10px;
+  border-radius: 4vmin;
+  min-height: 2vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-} */
-.Posts {
-  flex-wrap: wrap;
-  justify-content: space-between;
+  transition: all 0.2s;
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
 }
 
-.Post {
-  margin: 20px;
+.accordion-text {
+  font-weight: 400;
+  padding: 18px;
+}
+
+/* ACCORDION END */
+
+/* NEW RULES */
+
+.container {
+  display: flex;
+  justify-content: center;
   padding: 20px;
-  width: 500px;
-  min-height: 200px;
-  display: grid;
-  grid-template-rows: 20px 50px 1fr 50px;
-  border-radius: 10px;
+  max-width: 100vmin;
+  min-height: 150px;
+  flex-wrap: wrap;
+  border-radius: 3vmin;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
 }
 
-.Post:hover {
+.container:hover {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-  transform: scale(1.01);
-}
-.Post-Body {
-  position: relative;
-  text-decoration: none;
-  color: rgba(51, 51, 51, 0.9);
-}
-.Post-Body::after {
-  position: absolute;
-  top: 25px;
-  left: 0;
-  content: "";
-  width: 0%;
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.6);
-  transition: all 0.5s;
 }
 
-.Post-Body:hover::after {
-  width: 100%;
+.card {
+  min-height: 100px;
+  margin: 5px 0px 5px 0px;
+  display: flex;
+  justify-content: center;
+  padding: 4vmin;
+  border-radius: 3vmin;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  max-width: 100vmin;
+}
+.other-posts {
+  margin: 1vmin;
+  padding: 4vmin;
+  border-radius: 3vmin;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  max-width: 40vmin;
+  min-width: 38vmin;
 }
 
-.Post-Title {
-  grid-row: 1/4;
-  font-weight: 400;
-  color: #333333;
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
 }
 
-.Post-Body {
-  grid-row: 5/5;
-  align-self: center;
+.float-left {
+  float: left;
 }
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  height: 15vmin;
+}
+
+.header-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comment-pad {
+  padding: 10px;
+}
+.flex-1 {
+  flex: 1;
+}
+.post-margin {
+  margin: 40px 40px 40px 40px;
+}
+/* NEWRULES END */
+
+/* COLORS */
+.color1 {
+  background-color: var(--color1);
+}
+.color2 {
+  background-color: var(--color2);
+}
+.color3 {
+  background-color: var(--color3);
+}
+.color4 {
+  background-color: var(--color4);
+}
+.color5 {
+  background-color: var(--color5);
+}
+/* COLORS END */

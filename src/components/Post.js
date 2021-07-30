@@ -1,14 +1,13 @@
 import React from "react";
+import titleCase from "./Helper";
 
 function Post(props) {
   return (
-    // <div className="Post">
-    <div>
-      <div className="Posts">
-        <div className="Post">
-          <h2 className="Post-Title">{props.title}</h2>
-          <article className="Post-Body">{props.body}</article>
-        </div>
+    <div className="container card post-margin">
+      <div key={props.id}>
+        <h3 className="text-center">{titleCase(props.title)}</h3>
+        <br />
+        <article className="text-justify">{props.body}</article>
       </div>
     </div>
   );
